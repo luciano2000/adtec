@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 800 243" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(0.295758,0,0,0.295758,-322.833274,-100.815497)">
+        <g transform="matrix(2.022398,0,0,1.333333,241.449848,-175.295426)">
+            <rect x="538" y="692" width="1103" height="30" style="fill:rgb(240,184,35);"/>
+        </g>
+        <g transform="matrix(1,0,0,1,444,17.371241)">
+            <path d="M1774.5,750C1774.5,750 2030.679,786.164 2167.353,582C2312.159,365.688 2560.205,414 2560.205,414" style="fill:none;stroke:rgb(240,184,35);stroke-width:41.02px;"/>
+        </g>
+        <g transform="matrix(2.047371,0,0,2.047371,126.615298,-785.902177)">
+            <g transform="matrix(415.068493,0,0,415.068493,1809.067123,867)">
+            </g>
+            <text x="463px" y="867px" style="font-family:'CalSans-Regular', 'Cal Sans';font-size:415.068px;fill:rgb(14,42,71);">a<tspan x="706.23px 897.577px 1140.807px 1359.548px 1436.336px 1553.385px " y="867px 867px 867px 867px 867px 867px ">cquira</tspan></text>
+        </g>
+        <g transform="matrix(0.978378,0,0,0.978378,461.189189,29.184755)">
+            <circle cx="887.5" cy="754.5" r="92.5" style="fill:rgb(240,184,35);"/>
+        </g>
+        <g transform="matrix(0.978378,0,0,0.978378,2691.894241,29.184755)">
+            <circle cx="887.5" cy="754.5" r="92.5" style="fill:rgb(240,184,35);"/>
+        </g>
+        <g transform="matrix(0.978378,0,0,0.978378,2135.894241,-306.815245)">
+            <circle cx="887.5" cy="754.5" r="92.5" style="fill:rgb(240,184,35);"/>
+        </g>
+        <g transform="matrix(0.978378,0,0,0.978378,1350.189189,29.184755)">
+            <circle cx="887.5" cy="754.5" r="92.5" style="fill:rgb(240,184,35);"/>
+        </g>
+    </g>
+</svg>
