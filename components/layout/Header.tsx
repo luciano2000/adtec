@@ -129,6 +129,16 @@ export function Header() {
       {/* Mobile menu */}
       <AnimatePresence>
         {menuOpen && (
+          <>
+            {/* Full-screen overlay — fecha o menu ao clicar fora */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="md:hidden fixed inset-0 top-[72px]"
+              style={{ background: 'rgba(0,0,0,0.6)', zIndex: -1 }}
+              onClick={() => setMenuOpen(false)}
+            />
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
@@ -167,6 +177,7 @@ export function Header() {
               </div>
             </nav>
           </motion.div>
+          </>
         )}
       </AnimatePresence>
     </header>

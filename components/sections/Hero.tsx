@@ -105,7 +105,7 @@ export function Hero() {
       {/* Main content */}
       <motion.div
         style={{ y: contentY, opacity: contentOp }}
-        className="relative z-10 flex flex-col items-center text-center px-6 max-w-5xl mx-auto"
+        className="relative z-10 flex flex-col items-center text-center px-6 max-w-5xl mx-auto pt-20 md:pt-0"
       >
         {/* Badge */}
         <motion.div
