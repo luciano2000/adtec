@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useLanguage } from '@/components/ui/LanguageProvider';
 import { t } from '@/lib/translations';
 
@@ -12,14 +13,22 @@ const anchors: Record<string, string> = {
   services: '#servicos',
   about:    '#sobre',
   clients:  '#clientes',
-  blog:     '#blog',
+  blog:     '/blog',
   contact:  '#contato',
 };
 
 export function Header() {
   const { lang, setLang } = useLanguage();
+  const pathname           = usePathname();
+  const isHome             = pathname === '/';
   const [scrolled, setScrolled]   = useState(false);
   const [menuOpen, setMenuOpen]   = useState(false);
+
+  function href(key: string) {
+    const anchor = anchors[key];
+    if (key === 'blog') return '/blog';
+    return isHome ? anchor : `/${anchor}`;
+  }
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -56,7 +65,7 @@ export function Header() {
           {navLinks.map((key) => (
             <a
               key={key}
-              href={anchors[key]}
+              href={href(key)}
               className="text-sm font-medium transition-colors"
               style={{ color: '#6b7590' }}
               onMouseEnter={(e) => ((e.target as HTMLElement).style.color = '#e8eaf0')}
@@ -83,7 +92,7 @@ export function Header() {
 
           {/* CTA */}
           <a
-            href="#contato"
+            href={isHome ? '#contato' : '/#contato'}
             className="text-sm font-semibold px-5 py-2.5 rounded-full transition-all"
             style={{
               background: '#1b9e4b',
@@ -131,7 +140,7 @@ export function Header() {
               {navLinks.map((key) => (
                 <a
                   key={key}
-                  href={anchors[key]}
+                  href={href(key)}
                   onClick={() => setMenuOpen(false)}
                   className="text-base font-medium"
                   style={{ color: '#e8eaf0' }}
@@ -148,7 +157,7 @@ export function Header() {
                   {lang === 'pt' ? 'EN' : 'PT'}
                 </button>
                 <a
-                  href="#contato"
+                  href={isHome ? '#contato' : '/#contato'}
                   onClick={() => setMenuOpen(false)}
                   className="text-sm font-semibold px-5 py-2.5 rounded-full"
                   style={{ background: '#1b9e4b', color: '#fff' }}
