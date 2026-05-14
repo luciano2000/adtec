@@ -70,6 +70,15 @@ export const t = {
         descPt:  'Auditamos e otimizamos toda a sua stack de publicidade. Implementação de tags, ganho de velocidade, melhoria de viewability e CPM.',
         descEn:  'We audit and optimize your entire advertising stack. Tag implementation, speed gains, viewability improvement, and higher CPM.',
       },
+      {
+        id: 'branding',
+        icon: 'branding',
+        color: 'gold' as const,
+        titlePt: 'Identidade Visual & Branding',
+        titleEn: 'Visual Identity & Branding',
+        descPt:  'Criamos logotipos e identidades visuais que comunicam a essência da sua marca — do naming ao brandbook completo, com consistência em todos os pontos de contato.',
+        descEn:  'We create logos and visual identities that communicate the essence of your brand — from naming to a complete brandbook, with consistency across all touchpoints.',
+      },
     ],
   },
 

@@ -37,6 +37,13 @@ const icons: Record<string, React.ReactNode> = {
       <path d="M6 12h3M15 12h3M12 6V2M12 22v-3" />
     </svg>
   ),
+  branding: (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 2L2 7l10 5 10-5-10-5z" />
+      <path d="M2 17l10 5 10-5" />
+      <path d="M2 12l10 5 10-5" />
+    </svg>
+  ),
 };
 
 const colorMap: Record<string, { accent: string; bg: string; border: string }> = {
