@@ -19,6 +19,7 @@ const logos = [
   { name: 'RetroGamer',        file: 'retrogamer.svg',          ext: 'svg'  },
   { name: 'UAI',               file: 'uai.svg',                 ext: 'svg'  },
   { name: 'Vrum',              file: 'vrum.svg',                ext: 'svg'  },
+  { name: 'InfoMoney',         file: 'infomoney.svg',           ext: 'svg'  },
 ];
 
 const half = Math.ceil(logos.length / 2);
