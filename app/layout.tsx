@@ -22,6 +22,10 @@ export const metadata: Metadata = {
   creator: 'AD TEC',
   publisher: 'AD TEC',
   robots: { index: true, follow: true },
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+  },
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
