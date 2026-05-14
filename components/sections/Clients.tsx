@@ -17,7 +17,7 @@ const logos = [
   { name: 'Jadlog',            file: 'jadlog.svg',              ext: 'svg'  },
   { name: 'Lance!',            file: 'lance.svg',               ext: 'svg'  },
   { name: 'RetroGamer',        file: 'retrogamer.svg',          ext: 'svg'  },
-  { name: 'UAI',               file: 'uai.png',                 ext: 'png'  },
+  { name: 'UAI',               file: 'uai.svg',                 ext: 'svg'  },
   { name: 'Vrum',              file: 'vrum.svg',                ext: 'svg'  },
 ];
 
