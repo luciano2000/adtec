@@ -190,7 +190,7 @@ export function Hero() {
           {[
             { value: '+20', label: lang === 'pt' ? 'anos de experiência' : 'years of experience' },
             { value: '+13', label: lang === 'pt' ? 'clientes atendidos'  : 'clients served'       },
-            { value:   '5', label: lang === 'pt' ? 'serviços especializados' : 'specialized services' },
+            { value:   '6', label: lang === 'pt' ? 'serviços especializados' : 'specialized services' },
             { value: '100%', label: lang === 'pt' ? 'brasileiro'          : 'Brazilian'             },
           ].map((stat) => (
             <div key={stat.value} className="flex flex-col items-center gap-1">

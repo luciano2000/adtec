@@ -95,7 +95,7 @@ export const t = {
     stats: [
       { value: '+20', labelPt: 'anos de experiência',  labelEn: 'years of experience'   },
       { value: '+13', labelPt: 'clientes atendidos',   labelEn: 'clients served'        },
-      { value:   '5', labelPt: 'serviços especializados', labelEn: 'specialized services' },
+      { value:   '6', labelPt: 'serviços especializados', labelEn: 'specialized services' },
       { value: '100%', labelPt: 'brasileiro',          labelEn: 'Brazilian'             },
     ],
     differentials: [
