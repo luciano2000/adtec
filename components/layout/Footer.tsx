@@ -84,13 +84,7 @@ export function Footer() {
           style={{ borderColor: 'rgba(255,255,255,0.07)', color: '#3d4460' }}
         >
           <span>© {year} AD TEC Soluções em Tecnologia e Publicidade LTDA. {t.footer.rights[lang]}</span>
-          <div className="flex items-center gap-2">
-            <span
-              className="w-1.5 h-1.5 rounded-full animate-pulse"
-              style={{ background: '#1b9e4b' }}
-            />
-            <span>ad.tec.br</span>
-          </div>
+          <Image src="/logo.svg" alt="AD TEC" width={72} height={22} className="h-5 w-auto opacity-80" />
         </div>
       </div>
     </footer>
