@@ -41,14 +41,14 @@ function LogoTrack({ items, direction }: { items: typeof logos; direction: 'left
               alt={logo.name}
               width={140}
               height={48}
-              className="object-contain transition-all duration-300"
+              className="object-contain"
               style={{
                 maxHeight: 48,
-                filter: 'brightness(0) invert(0.45)',
-                transitionProperty: 'filter',
+                filter: 'brightness(0) invert(0.55)',
+                transition: 'filter 0.3s ease',
               }}
-              onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.filter = 'none'; }}
-              onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.filter = 'brightness(0) invert(0.45)'; }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.filter = 'brightness(0) invert(0.9)'; }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.filter = 'brightness(0) invert(0.55)'; }}
               unoptimized={logo.ext === 'svg'}
             />
           </div>
