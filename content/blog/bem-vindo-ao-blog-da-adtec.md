@@ -3,6 +3,7 @@ title: "Bem-vindo ao blog da AD TEC"
 description: "Nossa equipe começa a compartilhar insights sobre AdTech, mídia programática e performance digital."
 date: "2025-05-14"
 tags: ["adtech", "programática", "performance"]
+image: "/blog/bem-vindo.webp"
 lang: "pt"
 draft: false
 ---
