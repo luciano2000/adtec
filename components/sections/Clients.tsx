@@ -66,7 +66,7 @@ export function Clients() {
     <section
       id="clientes"
       className="relative py-32 overflow-hidden"
-      style={{ background: '#060a14' }}
+      style={{ background: 'var(--c-bg)' }}
     >
       <div
         className="absolute top-0 left-0 right-0 h-px"
@@ -100,11 +100,11 @@ export function Clients() {
       <div className="relative">
         <div
           className="absolute left-0 top-0 bottom-0 w-32 z-10 pointer-events-none"
-          style={{ background: 'linear-gradient(to right, #060a14, transparent)' }}
+          style={{ background: 'linear-gradient(to right, var(--c-bg), transparent)' }}
         />
         <div
           className="absolute right-0 top-0 bottom-0 w-32 z-10 pointer-events-none"
-          style={{ background: 'linear-gradient(to left, #060a14, transparent)' }}
+          style={{ background: 'linear-gradient(to left, var(--c-bg), transparent)' }}
         />
 
         <div className="flex flex-col gap-8">

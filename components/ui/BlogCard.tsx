@@ -15,7 +15,7 @@ export function BlogCard({ post, lang = 'pt' }: Props) {
     <Link
       href={`/blog/${post.slug}`}
       className="group flex flex-col rounded-2xl overflow-hidden border transition-all duration-300"
-      style={{ background: '#0c1220', borderColor: 'rgba(255,255,255,0.07)' }}
+      style={{ background: 'var(--c-surface)', borderColor: 'var(--c-border)' }}
       onMouseEnter={(e) => {
         (e.currentTarget as HTMLElement).style.borderColor = 'rgba(66,133,244,0.3)';
         (e.currentTarget as HTMLElement).style.transform   = 'translateY(-4px)';
@@ -25,7 +25,7 @@ export function BlogCard({ post, lang = 'pt' }: Props) {
         (e.currentTarget as HTMLElement).style.transform   = 'translateY(0)';
       }}
     >
-      <div className="relative w-full overflow-hidden" style={{ height: 200, background: '#111827' }}>
+      <div className="relative w-full overflow-hidden" style={{ height: 200, background: 'var(--c-card)' }}>
         {post.image ? (
           <Image
             src={post.image}
@@ -53,11 +53,11 @@ export function BlogCard({ post, lang = 'pt' }: Props) {
             ))}
           </div>
         )}
-        <h2 className="text-base font-bold leading-snug" style={{ color: '#e8eaf0' }}>{post.title}</h2>
+        <h2 className="text-base font-bold leading-snug" style={{ color: 'var(--c-text-1)' }}>{post.title}</h2>
         {post.description && (
-          <p className="text-sm leading-relaxed line-clamp-2" style={{ color: '#6b7590' }}>{post.description}</p>
+          <p className="text-sm leading-relaxed line-clamp-2" style={{ color: 'var(--c-text-2)' }}>{post.description}</p>
         )}
-        <span className="text-xs mt-auto" style={{ color: '#3d4460' }}>{formatDate(post.date, lang)}</span>
+        <span className="text-xs mt-auto" style={{ color: 'var(--c-text-3)' }}>{formatDate(post.date, lang)}</span>
       </div>
     </Link>
   );

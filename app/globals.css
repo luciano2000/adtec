@@ -6,18 +6,46 @@
   --color-brand-green: #1b9e4b;
   --color-brand-blue: #4285f4;
   --color-brand-gold: #f4b400;
+}
 
-  --color-bg-base: #060a14;
-  --color-bg-surface: #0c1220;
-  --color-bg-card: #111827;
-  --color-bg-card-hover: #1a2535;
+/* ─── Theme tokens — dark (default) ─── */
+:root {
+  --c-bg:        #060a14;
+  --c-surface:   #0c1220;
+  --c-card:      #111827;
+  --c-card-h:    #1a2535;
+  --c-text-1:    #e8eaf0;
+  --c-text-2:    #6b7590;
+  --c-text-3:    #3d4460;
+  --c-border:    rgba(255, 255, 255, 0.07);
+  --c-border-s:  rgba(255, 255, 255, 0.05);
+  --c-border-h:  rgba(255, 255, 255, 0.12);
+  --c-overlay:   rgba(255, 255, 255, 0.02);
+  --c-dot:       rgba(255, 255, 255, 0.055);
+  --c-header:    rgba(6, 10, 20, 0.85);
+  --c-menu:      rgba(6, 10, 20, 0.98);
+  --c-shadow:    none;
+  --c-shadow-h:  none;
+}
 
-  --color-text-primary: #e8eaf0;
-  --color-text-secondary: #6b7590;
-  --color-text-muted: #3d4460;
-
-  --color-border: rgba(255, 255, 255, 0.07);
-  --color-border-hover: rgba(255, 255, 255, 0.15);
+/* ─── Theme tokens — light ─── */
+[data-theme="light"] {
+  --c-bg:        #f5f7fa;
+  --c-surface:   #ffffff;
+  --c-card:      #ffffff;
+  --c-card-h:    #f0f4f8;
+  --c-text-1:    #111827;
+  --c-text-2:    #4b5563;
+  --c-text-3:    #94a3b8;
+  --c-border:    rgba(0, 0, 0, 0.08);
+  --c-border-s:  rgba(0, 0, 0, 0.05);
+  --c-border-h:  rgba(0, 0, 0, 0.15);
+  --c-overlay:   rgba(0, 0, 0, 0.02);
+  --c-dot:       rgba(0, 0, 0, 0.055);
+  --c-header:    rgba(245, 247, 250, 0.88);
+  --c-menu:      rgba(245, 247, 250, 0.98);
+  --c-shadow:    0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+  --c-shadow-h:  0 8px 30px rgba(0,0,0,0.1);
 }
 
 /* ─── Gilroy font faces ─── */
@@ -161,11 +189,12 @@ html {
 
 body {
   font-family: 'Gilroy', system-ui, sans-serif;
-  background-color: #060a14;
-  color: #e8eaf0;
+  background-color: var(--c-bg);
+  color: var(--c-text-1);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* ─── Gradient text helper ─── */
@@ -185,7 +214,7 @@ body {
 
 /* ─── Dot grid overlay ─── */
 .dot-grid {
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-image: radial-gradient(circle, var(--c-dot) 1px, transparent 1px);
   background-size: 32px 32px;
 }
 

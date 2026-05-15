@@ -27,7 +27,7 @@ export function Hero() {
       ref={ref}
       id="hero"
       className="relative flex items-center justify-center overflow-hidden"
-      style={{ minHeight: '100svh', background: '#060a14' }}
+      style={{ minHeight: '100svh', background: 'var(--c-bg)' }}
     >
       {/* Dot grid — parallax slow */}
       <motion.div
@@ -132,7 +132,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
           className="font-black leading-none tracking-tight mb-6"
-          style={{ fontSize: 'clamp(3rem, 10vw, 7.5rem)', color: '#e8eaf0' }}
+          style={{ fontSize: 'clamp(3rem, 10vw, 7.5rem)', color: 'var(--c-text-1)' }}
         >
           {t.hero.headline1[lang]}{' '}
           <span className="gradient-text">{t.hero.headline2[lang]}</span>
@@ -144,7 +144,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
           className="text-lg md:text-xl leading-relaxed mb-10 max-w-2xl"
-          style={{ color: '#6b7590' }}
+          style={{ color: 'var(--c-text-2)' }}
         >
           {t.hero.sub[lang]}
         </motion.p>
@@ -171,7 +171,7 @@ export function Hero() {
           <a
             href="#contato"
             className="px-8 py-4 rounded-full text-sm font-semibold border transition-all"
-            style={{ color: '#e8eaf0', borderColor: 'rgba(255,255,255,0.15)' }}
+            style={{ color: 'var(--c-text-1)', borderColor: 'var(--c-border-h)' }}
             onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.05)'; }}
             onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = 'transparent'; }}
           >
@@ -185,7 +185,7 @@ export function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1 }}
           className="flex flex-wrap justify-center gap-8 mt-16 pt-8 border-t w-full"
-          style={{ borderColor: 'rgba(255,255,255,0.07)' }}
+          style={{ borderColor: 'var(--c-border)' }}
         >
           {[
             { value: '+20', label: lang === 'pt' ? 'anos de experiência' : 'years of experience' },
@@ -194,8 +194,8 @@ export function Hero() {
             { value: '100%', label: lang === 'pt' ? 'brasileiro'          : 'Brazilian'             },
           ].map((stat) => (
             <div key={stat.value} className="flex flex-col items-center gap-1">
-              <span className="text-2xl font-black" style={{ color: '#e8eaf0' }}>{stat.value}</span>
-              <span className="text-xs" style={{ color: '#6b7590' }}>{stat.label}</span>
+              <span className="text-2xl font-black" style={{ color: 'var(--c-text-1)' }}>{stat.value}</span>
+              <span className="text-xs" style={{ color: 'var(--c-text-2)' }}>{stat.label}</span>
             </div>
           ))}
         </motion.div>
@@ -206,7 +206,7 @@ export function Hero() {
         style={{ opacity: scrollOp, position: 'absolute', bottom: '2rem', left: '50%', transform: 'translateX(-50%)' }}
         className="flex flex-col items-center gap-2"
       >
-        <span className="text-xs tracking-widest uppercase" style={{ color: '#3d4460' }}>scroll</span>
+        <span className="text-xs tracking-widest uppercase" style={{ color: 'var(--c-text-3)' }}>scroll</span>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}

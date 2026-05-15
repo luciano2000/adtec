@@ -30,7 +30,7 @@ export function Contact() {
     <section
       id="contato"
       className="relative py-32 overflow-hidden"
-      style={{ background: '#0c1220' }}
+      style={{ background: 'var(--c-surface)' }}
     >
       <div
         className="absolute top-0 left-0 right-0 h-px"
@@ -66,10 +66,10 @@ export function Contact() {
             >
               {t.contact.badge[lang]}
             </span>
-            <h2 className="text-4xl md:text-5xl font-black leading-tight mb-6" style={{ color: '#e8eaf0' }}>
+            <h2 className="text-4xl md:text-5xl font-black leading-tight mb-6" style={{ color: 'var(--c-text-1)' }}>
               {t.contact.heading[lang]}
             </h2>
-            <p className="text-base leading-relaxed mb-10" style={{ color: '#6b7590' }}>
+            <p className="text-base leading-relaxed mb-10" style={{ color: 'var(--c-text-2)' }}>
               {t.contact.sub[lang]}
             </p>
 
@@ -78,7 +78,7 @@ export function Contact() {
               <a
                 href="mailto:atendimento@ad.tec.br"
                 className="flex items-center gap-4 p-4 rounded-xl border transition-all"
-                style={{ borderColor: 'rgba(255,255,255,0.07)', background: 'rgba(255,255,255,0.02)' }}
+                style={{ borderColor: 'var(--c-border)', background: 'rgba(255,255,255,0.02)' }}
                 onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(27,158,75,0.3)'; }}
                 onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.07)'; }}
               >
@@ -89,8 +89,8 @@ export function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-xs" style={{ color: '#6b7590' }}>Email</p>
-                  <p className="text-sm font-medium" style={{ color: '#e8eaf0' }}>atendimento@ad.tec.br</p>
+                  <p className="text-xs" style={{ color: 'var(--c-text-2)' }}>Email</p>
+                  <p className="text-sm font-medium" style={{ color: 'var(--c-text-1)' }}>atendimento@ad.tec.br</p>
                 </div>
               </a>
 
@@ -99,7 +99,7 @@ export function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 rounded-xl border transition-all"
-                style={{ borderColor: 'rgba(255,255,255,0.07)', background: 'rgba(255,255,255,0.02)' }}
+                style={{ borderColor: 'var(--c-border)', background: 'rgba(255,255,255,0.02)' }}
                 onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(37,211,102,0.3)'; }}
                 onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.07)'; }}
               >
@@ -109,8 +109,8 @@ export function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-xs" style={{ color: '#6b7590' }}>WhatsApp</p>
-                  <p className="text-sm font-medium" style={{ color: '#e8eaf0' }}>(11) 97838-5112</p>
+                  <p className="text-xs" style={{ color: 'var(--c-text-2)' }}>WhatsApp</p>
+                  <p className="text-sm font-medium" style={{ color: 'var(--c-text-1)' }}>(11) 97838-5112</p>
                 </div>
               </a>
             </div>
@@ -126,36 +126,36 @@ export function Contact() {
             <form
               onSubmit={handleSubmit}
               className="flex flex-col gap-5 p-8 rounded-2xl border"
-              style={{ background: '#111827', borderColor: 'rgba(255,255,255,0.07)' }}
+              style={{ background: 'var(--c-card)', borderColor: 'var(--c-border)' }}
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-medium" style={{ color: '#6b7590' }}>{t.contact.name[lang]}</label>
+                  <label className="text-xs font-medium" style={{ color: 'var(--c-text-2)' }}>{t.contact.name[lang]}</label>
                   <input
                     name="name"
                     type="text"
                     required
                     className="px-4 py-3 rounded-xl text-sm outline-none transition-all"
                     style={{
-                      background: '#0c1220',
+                      background: 'var(--c-surface)',
                       border: '1px solid rgba(255,255,255,0.08)',
-                      color: '#e8eaf0',
+                      color: 'var(--c-text-1)',
                     }}
                     onFocus={(e) => { (e.target as HTMLElement).style.borderColor = 'rgba(27,158,75,0.5)'; }}
                     onBlur={(e)  => { (e.target as HTMLElement).style.borderColor = 'rgba(255,255,255,0.08)'; }}
                   />
                 </div>
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-medium" style={{ color: '#6b7590' }}>{t.contact.email[lang]}</label>
+                  <label className="text-xs font-medium" style={{ color: 'var(--c-text-2)' }}>{t.contact.email[lang]}</label>
                   <input
                     name="email"
                     type="email"
                     required
                     className="px-4 py-3 rounded-xl text-sm outline-none transition-all"
                     style={{
-                      background: '#0c1220',
+                      background: 'var(--c-surface)',
                       border: '1px solid rgba(255,255,255,0.08)',
-                      color: '#e8eaf0',
+                      color: 'var(--c-text-1)',
                     }}
                     onFocus={(e) => { (e.target as HTMLElement).style.borderColor = 'rgba(27,158,75,0.5)'; }}
                     onBlur={(e)  => { (e.target as HTMLElement).style.borderColor = 'rgba(255,255,255,0.08)'; }}
@@ -164,15 +164,15 @@ export function Contact() {
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-medium" style={{ color: '#6b7590' }}>{t.contact.subject[lang]}</label>
+                <label className="text-xs font-medium" style={{ color: 'var(--c-text-2)' }}>{t.contact.subject[lang]}</label>
                 <select
                   name="subject"
                   required
                   className="px-4 py-3 rounded-xl text-sm outline-none transition-all appearance-none"
                   style={{
-                    background: '#0c1220',
+                    background: 'var(--c-surface)',
                     border: '1px solid rgba(255,255,255,0.08)',
-                    color: '#e8eaf0',
+                    color: 'var(--c-text-1)',
                   }}
                   onFocus={(e) => { (e.target as HTMLElement).style.borderColor = 'rgba(27,158,75,0.5)'; }}
                   onBlur={(e)  => { (e.target as HTMLElement).style.borderColor = 'rgba(255,255,255,0.08)'; }}
@@ -185,16 +185,16 @@ export function Contact() {
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-medium" style={{ color: '#6b7590' }}>{t.contact.message[lang]}</label>
+                <label className="text-xs font-medium" style={{ color: 'var(--c-text-2)' }}>{t.contact.message[lang]}</label>
                 <textarea
                   name="message"
                   rows={5}
                   required
                   className="px-4 py-3 rounded-xl text-sm outline-none transition-all resize-none"
                   style={{
-                    background: '#0c1220',
+                    background: 'var(--c-surface)',
                     border: '1px solid rgba(255,255,255,0.08)',
-                    color: '#e8eaf0',
+                    color: 'var(--c-text-1)',
                   }}
                   onFocus={(e) => { (e.target as HTMLElement).style.borderColor = 'rgba(27,158,75,0.5)'; }}
                   onBlur={(e)  => { (e.target as HTMLElement).style.borderColor = 'rgba(255,255,255,0.08)'; }}

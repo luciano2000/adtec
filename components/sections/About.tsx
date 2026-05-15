@@ -18,7 +18,7 @@ function StatItem({ value, label }: { value: string; label: string }) {
       className="flex flex-col items-start gap-1"
     >
       <span className="text-4xl md:text-5xl font-black gradient-text-blue-green">{value}</span>
-      <span className="text-sm" style={{ color: '#6b7590' }}>{label}</span>
+      <span className="text-sm" style={{ color: 'var(--c-text-2)' }}>{label}</span>
     </motion.div>
   );
 }
@@ -30,7 +30,7 @@ export function About() {
     <section
       id="sobre"
       className="relative py-32 overflow-hidden"
-      style={{ background: '#0c1220' }}
+      style={{ background: 'var(--c-surface)' }}
     >
       <div
         className="absolute top-0 left-0 right-0 h-px"
@@ -56,13 +56,13 @@ export function About() {
               </span>
               <h2
                 className="text-4xl md:text-5xl font-black leading-tight mb-6"
-                style={{ color: '#e8eaf0' }}
+                style={{ color: 'var(--c-text-1)' }}
               >
                 {t.about.heading[lang]}
               </h2>
               <p
                 className="text-base leading-relaxed mb-10"
-                style={{ color: '#6b7590' }}
+                style={{ color: 'var(--c-text-2)' }}
               >
                 {t.about.body[lang]}
               </p>
@@ -84,7 +84,7 @@ export function About() {
                     show:   { opacity: 1, x: 0, transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] } },
                   }}
                   className="flex gap-4 p-5 rounded-xl border"
-                  style={{ background: 'rgba(255,255,255,0.02)', borderColor: 'rgba(255,255,255,0.06)' }}
+                  style={{ background: 'rgba(255,255,255,0.02)', borderColor: 'var(--c-border-s)' }}
                 >
                   <div
                     className="w-8 h-8 flex-shrink-0 rounded-lg flex items-center justify-center text-sm font-bold"
@@ -93,10 +93,10 @@ export function About() {
                     {i + 1}
                   </div>
                   <div>
-                    <p className="text-sm font-semibold mb-1" style={{ color: '#e8eaf0' }}>
+                    <p className="text-sm font-semibold mb-1" style={{ color: 'var(--c-text-1)' }}>
                       {lang === 'pt' ? d.titlePt : d.titleEn}
                     </p>
-                    <p className="text-sm leading-relaxed" style={{ color: '#6b7590' }}>
+                    <p className="text-sm leading-relaxed" style={{ color: 'var(--c-text-2)' }}>
                       {lang === 'pt' ? d.descPt : d.descEn}
                     </p>
                   </div>
@@ -107,7 +107,7 @@ export function About() {
 
           {/* Right: stats */}
           <div className="lg:pt-16">
-            <div className="grid grid-cols-2 gap-8 p-8 rounded-2xl border" style={{ background: '#111827', borderColor: 'rgba(255,255,255,0.07)' }}>
+            <div className="grid grid-cols-2 gap-8 p-8 rounded-2xl border" style={{ background: 'var(--c-card)', borderColor: 'var(--c-border)' }}>
               {t.about.stats.map((stat) => (
                 <StatItem
                   key={stat.value}
@@ -126,7 +126,7 @@ export function About() {
               className="mt-8 h-px origin-left"
               style={{ background: 'linear-gradient(90deg, #1b9e4b, #4285f4, transparent)' }}
             />
-            <p className="mt-4 text-xs" style={{ color: '#3d4460' }}>
+            <p className="mt-4 text-xs" style={{ color: 'var(--c-text-3)' }}>
               {lang === 'pt'
                 ? 'Atuando desde 2000 no ecossistema de publicidade digital brasileiro.'
                 : 'Operating since 2000 in the Brazilian digital advertising ecosystem.'}

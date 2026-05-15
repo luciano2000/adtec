@@ -21,7 +21,7 @@ export function BlogPreview({ posts }: Props) {
     <section
       id="blog"
       className="relative py-32 overflow-hidden"
-      style={{ background: '#060a14' }}
+      style={{ background: 'var(--c-bg)' }}
     >
       <div
         className="absolute top-0 left-0 right-0 h-px"
@@ -44,7 +44,7 @@ export function BlogPreview({ posts }: Props) {
             >
               {t.blog.badge[lang]}
             </span>
-            <h2 className="text-4xl md:text-5xl font-black" style={{ color: '#e8eaf0' }}>
+            <h2 className="text-4xl md:text-5xl font-black" style={{ color: 'var(--c-text-1)' }}>
               {t.blog.heading[lang]}
             </h2>
           </div>
@@ -76,7 +76,7 @@ export function BlogPreview({ posts }: Props) {
                 show:   { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } },
               }}
               className="group flex flex-col rounded-2xl overflow-hidden border transition-all duration-300"
-              style={{ background: '#0c1220', borderColor: 'rgba(255,255,255,0.07)' }}
+              style={{ background: 'var(--c-surface)', borderColor: 'var(--c-border)' }}
               onMouseEnter={(e) => {
                 (e.currentTarget as HTMLElement).style.borderColor = 'rgba(66,133,244,0.3)';
                 (e.currentTarget as HTMLElement).style.transform    = 'translateY(-4px)';
@@ -87,7 +87,7 @@ export function BlogPreview({ posts }: Props) {
               }}
             >
               {/* Image */}
-              <div className="relative w-full overflow-hidden" style={{ height: 200, background: '#111827' }}>
+              <div className="relative w-full overflow-hidden" style={{ height: 200, background: 'var(--c-card)' }}>
                 {post.image ? (
                   <Image
                     src={post.image}
@@ -124,18 +124,18 @@ export function BlogPreview({ posts }: Props) {
                   </div>
                 )}
 
-                <h3 className="text-base font-bold leading-snug" style={{ color: '#e8eaf0' }}>
+                <h3 className="text-base font-bold leading-snug" style={{ color: 'var(--c-text-1)' }}>
                   {post.title}
                 </h3>
 
                 {post.description && (
-                  <p className="text-sm leading-relaxed line-clamp-2" style={{ color: '#6b7590' }}>
+                  <p className="text-sm leading-relaxed line-clamp-2" style={{ color: 'var(--c-text-2)' }}>
                     {post.description}
                   </p>
                 )}
 
-                <div className="flex items-center justify-between mt-auto pt-4 border-t" style={{ borderColor: 'rgba(255,255,255,0.06)' }}>
-                  <span className="text-xs" style={{ color: '#3d4460' }}>
+                <div className="flex items-center justify-between mt-auto pt-4 border-t" style={{ borderColor: 'var(--c-border-s)' }}>
+                  <span className="text-xs" style={{ color: 'var(--c-text-3)' }}>
                     {formatDate(post.date, lang)}
                   </span>
                   <Link

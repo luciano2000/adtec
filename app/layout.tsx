@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
 import './globals.css';
 import { LanguageProvider } from '@/components/ui/LanguageProvider';
+import { ThemeProvider } from '@/components/ui/ThemeProvider';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
@@ -62,6 +63,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="pt-BR" className="scroll-smooth">
       <body>
+        {/* Anti-FOUC: aplica o tema antes do primeiro render */}
+        <script dangerouslySetInnerHTML={{ __html: `try{var t=localStorage.getItem('adtec-theme')||'dark';document.documentElement.setAttribute('data-theme',t)}catch(e){}` }} />
         <Script
           id="gtm"
           strategy="afterInteractive"
@@ -81,12 +84,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
-        <LanguageProvider>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-          <WhatsAppButton />
-        </LanguageProvider>
+        <ThemeProvider>
+          <LanguageProvider>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+            <WhatsAppButton />
+          </LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -24,7 +24,7 @@ export function Services() {
   const { lang } = useLanguage();
 
   return (
-    <section id="servicos" className="relative py-32 overflow-hidden" style={{ background: '#060a14' }}>
+    <section id="servicos" className="relative py-32 overflow-hidden" style={{ background: 'var(--c-bg)' }}>
       <div
         className="absolute top-0 left-0 right-0 h-px"
         style={{ background: 'linear-gradient(90deg, transparent, rgba(27,158,75,0.4), rgba(66,133,244,0.4), transparent)' }}
@@ -45,7 +45,7 @@ export function Services() {
           >
             {t.services.badge[lang]}
           </span>
-          <h2 className="text-4xl md:text-5xl font-black leading-tight" style={{ color: '#e8eaf0' }}>
+          <h2 className="text-4xl md:text-5xl font-black leading-tight" style={{ color: 'var(--c-text-1)' }}>
             {t.services.heading[lang]}
           </h2>
         </motion.div>
@@ -70,8 +70,8 @@ export function Services() {
                 transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
                 className="group relative flex flex-col justify-between p-8 rounded-2xl border overflow-hidden"
                 style={{
-                  background: '#0c1220',
-                  borderColor: 'rgba(255,255,255,0.07)',
+                  background: 'var(--c-surface)',
+                  borderColor: 'var(--c-border)',
                   minHeight: 260,
                   textDecoration: 'none',
                 }}
@@ -108,13 +108,13 @@ export function Services() {
                   <h3
                     className="font-black leading-tight mb-4"
                     style={{
-                      color: '#e8eaf0',
+                      color: 'var(--c-text-1)',
                       fontSize: 'clamp(1.35rem, 2.5vw, 1.65rem)',
                     }}
                   >
                     {lang === 'pt' ? service.titlePt : service.titleEn}
                   </h3>
-                  <p className="text-sm leading-relaxed" style={{ color: '#6b7590' }}>
+                  <p className="text-sm leading-relaxed" style={{ color: 'var(--c-text-2)' }}>
                     {lang === 'pt' ? service.descPt : service.descEn}
                   </p>
                 </div>
@@ -123,7 +123,7 @@ export function Services() {
                 <div
                   className="flex items-center gap-2 mt-8 pt-5 border-t text-xs font-semibold transition-all"
                   style={{
-                    borderColor: 'rgba(255,255,255,0.06)',
+                    borderColor: 'var(--c-border-s)',
                     color: colors.accent,
                   }}
                 >
