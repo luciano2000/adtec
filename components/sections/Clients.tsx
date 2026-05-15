@@ -87,10 +87,10 @@ export function Clients() {
           >
             {t.clients.badge[lang]}
           </span>
-          <h2 className="text-4xl md:text-5xl font-black mb-4" style={{ color: '#e8eaf0' }}>
+          <h2 className="text-4xl md:text-5xl font-black mb-4" style={{ color: 'var(--c-text-1)' }}>
             {t.clients.heading[lang]}
           </h2>
-          <p className="text-base" style={{ color: '#6b7590' }}>
+          <p className="text-base" style={{ color: 'var(--c-text-2)' }}>
             {t.clients.sub[lang]}
           </p>
         </motion.div>

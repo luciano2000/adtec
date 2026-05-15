@@ -138,11 +138,11 @@ export function Contact() {
                     className="px-4 py-3 rounded-xl text-sm outline-none transition-all"
                     style={{
                       background: 'var(--c-surface)',
-                      border: '1px solid rgba(255,255,255,0.08)',
+                      border: '1px solid var(--c-border)',
                       color: 'var(--c-text-1)',
                     }}
                     onFocus={(e) => { (e.target as HTMLElement).style.borderColor = 'rgba(27,158,75,0.5)'; }}
-                    onBlur={(e)  => { (e.target as HTMLElement).style.borderColor = 'rgba(255,255,255,0.08)'; }}
+                    onBlur={(e)  => { (e.target as HTMLElement).style.borderColor = 'var(--c-border)'; }}
                   />
                 </div>
                 <div className="flex flex-col gap-1.5">
@@ -154,11 +154,11 @@ export function Contact() {
                     className="px-4 py-3 rounded-xl text-sm outline-none transition-all"
                     style={{
                       background: 'var(--c-surface)',
-                      border: '1px solid rgba(255,255,255,0.08)',
+                      border: '1px solid var(--c-border)',
                       color: 'var(--c-text-1)',
                     }}
                     onFocus={(e) => { (e.target as HTMLElement).style.borderColor = 'rgba(27,158,75,0.5)'; }}
-                    onBlur={(e)  => { (e.target as HTMLElement).style.borderColor = 'rgba(255,255,255,0.08)'; }}
+                    onBlur={(e)  => { (e.target as HTMLElement).style.borderColor = 'var(--c-border)'; }}
                   />
                 </div>
               </div>
@@ -171,11 +171,11 @@ export function Contact() {
                   className="px-4 py-3 rounded-xl text-sm outline-none transition-all appearance-none"
                   style={{
                     background: 'var(--c-surface)',
-                    border: '1px solid rgba(255,255,255,0.08)',
+                    border: '1px solid var(--c-border)',
                     color: 'var(--c-text-1)',
                   }}
                   onFocus={(e) => { (e.target as HTMLElement).style.borderColor = 'rgba(27,158,75,0.5)'; }}
-                  onBlur={(e)  => { (e.target as HTMLElement).style.borderColor = 'rgba(255,255,255,0.08)'; }}
+                  onBlur={(e)  => { (e.target as HTMLElement).style.borderColor = 'var(--c-border)'; }}
                 >
                   <option value="">—</option>
                   {subjects.map((s) => (
@@ -193,11 +193,11 @@ export function Contact() {
                   className="px-4 py-3 rounded-xl text-sm outline-none transition-all resize-none"
                   style={{
                     background: 'var(--c-surface)',
-                    border: '1px solid rgba(255,255,255,0.08)',
+                    border: '1px solid var(--c-border)',
                     color: 'var(--c-text-1)',
                   }}
                   onFocus={(e) => { (e.target as HTMLElement).style.borderColor = 'rgba(27,158,75,0.5)'; }}
-                  onBlur={(e)  => { (e.target as HTMLElement).style.borderColor = 'rgba(255,255,255,0.08)'; }}
+                  onBlur={(e)  => { (e.target as HTMLElement).style.borderColor = 'var(--c-border)'; }}
                 />
               </div>
 
