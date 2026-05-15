@@ -4,57 +4,15 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '@/components/ui/LanguageProvider';
 import { t } from '@/lib/translations';
 
-const icons: Record<string, React.ReactNode> = {
-  target: (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" />
-      <path d="M12 2v2M12 20v2M2 12h2M20 12h2" />
-    </svg>
-  ),
-  seo: (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="11" cy="11" r="8" />
-      <path d="m21 21-4.35-4.35M8 11h6M11 8v6" />
-    </svg>
-  ),
-  code: (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" />
-      <line x1="14" y1="4" x2="10" y2="20" />
-    </svg>
-  ),
-  chart: (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" />
-      <line x1="6" y1="20" x2="6" y2="14" />
-      <path d="M2 20h20M6 14l3-4 3 3 6-9" />
-    </svg>
-  ),
-  circuit: (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="2" y="6" width="4" height="12" rx="1" /><rect x="18" y="6" width="4" height="12" rx="1" />
-      <rect x="9" y="9" width="6" height="6" rx="1" />
-      <path d="M6 12h3M15 12h3M12 6V2M12 22v-3" />
-    </svg>
-  ),
-  branding: (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 2L2 7l10 5 10-5-10-5z" />
-      <path d="M2 17l10 5 10-5" />
-      <path d="M2 12l10 5 10-5" />
-    </svg>
-  ),
-};
-
 const colorMap: Record<string, { accent: string; bg: string; border: string }> = {
-  green: { accent: '#1b9e4b', bg: 'rgba(27,158,75,0.08)',   border: 'rgba(27,158,75,0.25)'   },
-  blue:  { accent: '#4285f4', bg: 'rgba(66,133,244,0.08)',  border: 'rgba(66,133,244,0.25)'  },
-  gold:  { accent: '#f4b400', bg: 'rgba(244,180,0,0.08)',   border: 'rgba(244,180,0,0.25)'   },
+  green: { accent: '#1b9e4b', bg: 'rgba(27,158,75,0.06)',   border: 'rgba(27,158,75,0.2)'   },
+  blue:  { accent: '#4285f4', bg: 'rgba(66,133,244,0.06)',  border: 'rgba(66,133,244,0.2)'  },
+  gold:  { accent: '#f4b400', bg: 'rgba(244,180,0,0.06)',   border: 'rgba(244,180,0,0.2)'   },
 };
 
 const containerVariants = {
   hidden: {},
-  show: { transition: { staggerChildren: 0.1 } },
+  show: { transition: { staggerChildren: 0.08 } },
 };
 
 const cardVariants = {
@@ -73,6 +31,7 @@ export function Services() {
       />
 
       <div className="max-w-7xl mx-auto px-6">
+        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -91,44 +50,68 @@ export function Services() {
           </h2>
         </motion.div>
 
+        {/* Cards */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: '-60px' }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
         >
-          {t.services.list.map((service) => {
+          {t.services.list.map((service, i) => {
             const colors = colorMap[service.color];
+            const num = String(i + 1).padStart(2, '0');
             return (
               <motion.a
                 key={service.id}
                 href="#contato"
                 variants={cardVariants}
-                whileHover={{
-                  y: -6,
-                  boxShadow: `0 24px 60px ${colors.bg}`,
-                  borderColor: colors.border,
-                  background: '#111827',
-                }}
+                whileHover={{ y: -6, borderColor: colors.border }}
                 transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                className="group flex flex-col gap-5 p-7 rounded-2xl border"
+                className="group relative flex flex-col justify-between p-8 rounded-2xl border overflow-hidden"
                 style={{
                   background: '#0c1220',
                   borderColor: 'rgba(255,255,255,0.07)',
+                  minHeight: 260,
                   textDecoration: 'none',
-                  display: 'flex',
                 }}
               >
-                <div
-                  className="w-12 h-12 flex items-center justify-center rounded-xl flex-shrink-0"
-                  style={{ background: colors.bg, color: colors.accent, border: `1px solid ${colors.border}` }}
+                {/* Number — background decoration */}
+                <span
+                  className="absolute top-4 right-6 font-black select-none pointer-events-none leading-none"
+                  style={{
+                    fontSize: '6rem',
+                    color: colors.accent,
+                    opacity: 0.06,
+                    lineHeight: 1,
+                  }}
                 >
-                  {icons[service.icon]}
+                  {num}
+                </span>
+
+                {/* Top: number badge + accent dot */}
+                <div className="flex items-center justify-between mb-6">
+                  <span
+                    className="text-xs font-bold tracking-widest uppercase"
+                    style={{ color: colors.accent }}
+                  >
+                    {num}
+                  </span>
+                  <span
+                    className="w-2 h-2 rounded-full"
+                    style={{ background: colors.accent, opacity: 0.6 }}
+                  />
                 </div>
 
-                <div className="flex flex-col gap-2 flex-1">
-                  <h3 className="text-lg font-bold" style={{ color: '#e8eaf0' }}>
+                {/* Title — large and dominant */}
+                <div className="flex-1">
+                  <h3
+                    className="font-black leading-tight mb-4"
+                    style={{
+                      color: '#e8eaf0',
+                      fontSize: 'clamp(1.35rem, 2.5vw, 1.65rem)',
+                    }}
+                  >
                     {lang === 'pt' ? service.titlePt : service.titleEn}
                   </h3>
                   <p className="text-sm leading-relaxed" style={{ color: '#6b7590' }}>
@@ -136,7 +119,14 @@ export function Services() {
                   </p>
                 </div>
 
-                <div className="flex items-center gap-1 text-xs font-semibold" style={{ color: colors.accent }}>
+                {/* Bottom CTA */}
+                <div
+                  className="flex items-center gap-2 mt-8 pt-5 border-t text-xs font-semibold transition-all"
+                  style={{
+                    borderColor: 'rgba(255,255,255,0.06)',
+                    color: colors.accent,
+                  }}
+                >
                   {lang === 'pt' ? 'Saiba mais' : 'Learn more'}
                   <svg
                     width="14" height="14" viewBox="0 0 16 16" fill="none"
