@@ -168,6 +168,51 @@ const services: ServiceContent[] = [
       description: 'Criamos sites institucionais, landing pages e lojas virtuais com as novas tecnologias. Leves, rápidos, com SEO técnico integrado e foco em conversão.',
     },
   },
+  {
+    slug: 'adops',
+    color: 'green',
+    badge: 'AdOps para Publishers',
+    headline: 'Seu Hub de AdOps. Nossa expertise de 26 anos.',
+    intro: [
+      'Com mais de 26 anos de expertise em Operações de Publicidade para Publishers, somos o parceiro que o seu time de vendas precisava: assumimos toda a operação de AdOps do dia a dia para que você foque no que importa — crescer receita e entregar resultado para os seus anunciantes.',
+      'Operamos principalmente no Google Ad Manager 360 e atuamos como uma extensão do seu time — executando campanhas, realizando otimizações contínuas e apresentando resultados com clareza para seu time interno ou diretamente para os seus clientes.',
+    ],
+    steps: [
+      {
+        number: '01',
+        title: 'Onboarding & Diagnóstico',
+        description: 'Mapeamos toda a sua operação atual: estrutura de inventário, campanhas ativas, configurações do Ad Manager, acordos comerciais e gargalos operacionais. Entregamos um plano de ação em até 5 dias úteis.',
+      },
+      {
+        number: '02',
+        title: 'Operação de Campanhas',
+        description: 'Executamos trafficking completo — criação de line items, upload de criativos, targeting, caps de frequência, pacing e monitoramento de entrega. Zero atraso para o seu time de vendas.',
+      },
+      {
+        number: '03',
+        title: 'Otimização Contínua',
+        description: 'Análise diária de performance, ajustes de prioridade, resolução de conflitos de inventário e maximização do fill rate. Cada impressão entregue com eficiência máxima.',
+      },
+      {
+        number: '04',
+        title: 'Relatórios & Apresentações',
+        description: 'Dashboards customizados e relatórios periódicos com linguagem acessível para o seu time comercial ou para os anunciantes finais — evidenciando entrega, viewability, CTR e valor gerado.',
+      },
+    ],
+    differentials: [
+      '26 anos de experiência exclusiva em operações de publicidade para publishers',
+      'Profundo domínio do Google Ad Manager 360 — da configuração ao troubleshooting avançado',
+      'Atuamos como extensão do seu time: seu time de vendas tem suporte direto e ágil',
+      'Operação de campanhas diretas e programáticas no mesmo fluxo integrado',
+      'Relatórios claros para anunciantes — menos reuniões de alinhamento, mais renovações de contratos',
+      'Experiência com publishers de grande porte, portais de notícias e veículos especializados',
+    ],
+    ctaLabel: 'Agendar Consultoria Estratégica',
+    meta: {
+      title: 'AdOps para Publishers — Google Ad Manager 360 | AD TEC',
+      description: 'Hub de AdOps com 26 anos de expertise. Operação completa no Google Ad Manager 360, execução de campanhas, otimizações e relatórios para publishers e seu time de vendas.',
+    },
+  },
 ];
 
 export function getAllServiceSlugs(): string[] {

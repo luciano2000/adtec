@@ -59,7 +59,7 @@ export const t = {
         id: 'adops',
         icon: 'chart',
         color: 'green' as const,
-        hasPage: false,
+        hasPage: true,
         titlePt: 'AdOps para Publishers',
         titleEn: 'AdOps for Publishers',
         descPt:  'Monetização inteligente do seu inventário. Setup completo do Google Ad Manager, ativação de programática, header bidding e gestão de yields.',
