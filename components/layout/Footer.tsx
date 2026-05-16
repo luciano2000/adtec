@@ -18,7 +18,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <Image src="/logo-white.svg" alt="AD TEC" width={110} height={34} className="mb-4 h-8 w-auto" />
+            <Image src="/novo-logo-white-DDDDDD.svg" alt="AD TEC" width={110} height={32} className="mb-4 h-8 w-auto" />
             <p className="text-sm leading-relaxed mb-6" style={{ color: 'var(--c-text-2)' }}>
               {t.footer.tagline[lang]}
             </p>
@@ -84,7 +84,7 @@ export function Footer() {
           style={{ borderColor: 'var(--c-border)', color: 'var(--c-text-3)' }}
         >
           <span>© {year} AD TEC Soluções em Tecnologia e Publicidade LTDA. {t.footer.rights[lang]}</span>
-          <Image src="/logo.svg" alt="AD TEC" width={72} height={22} className="h-5 w-auto opacity-80" />
+          <Image src="/novo-logo-35A853.svg" alt="AD TEC" width={72} height={22} className="h-5 w-auto opacity-80" />
         </div>
       </div>
     </footer>

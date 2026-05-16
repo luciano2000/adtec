@@ -72,7 +72,7 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
           <Image
-            src={isDark ? '/logo-white.svg' : '/logo-dark.svg'}
+            src={isDark ? '/novo-logo-white-DDDDDD.svg' : '/novo-logo-dark-303030.svg'}
             alt="AD TEC"
             width={120}
             height={36}
