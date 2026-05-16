@@ -213,6 +213,96 @@ const services: ServiceContent[] = [
       description: 'Hub de AdOps com 26 anos de expertise. Operação completa no Google Ad Manager 360, execução de campanhas, otimizações e relatórios para publishers e seu time de vendas.',
     },
   },
+  {
+    slug: 'adtech',
+    color: 'blue',
+    badge: 'Consultoria AdTech',
+    headline: 'Seus dados de publicidade merecem render mais.',
+    intro: [
+      'Você é publisher — de qualquer tamanho, qualquer nicho — e sente que os seus números de publicidade ficam aquém do potencial? Fazemos uma consultoria completa em AdTech, analisando seus scripts, parceiros, integrações e configurações para garantir que suas métricas atendam às exigências do mercado atual.',
+      'O resultado é concreto: mais viewability, anúncios que carregam mais rápido, CPMs mais altos e receita crescente — sem trocar de parceiros de mídia, apenas extraindo o máximo do que você já tem.',
+    ],
+    steps: [
+      {
+        number: '01',
+        title: 'Auditoria de Stack',
+        description: 'Analisamos todos os scripts de publicidade rodando no seu site — SSPs, DSPs, ferramentas de header bidding, lazy loading, wrappers — identificando conflitos, scripts desnecessários e oportunidades de ganho imediato.',
+      },
+      {
+        number: '02',
+        title: 'Diagnóstico de Viewability',
+        description: 'Medimos viewability por posição, dispositivo e formato. Identificamos por que certas unidades ficam abaixo de 50% e desenhamos a correção — seja de layout, lazy load, scroll depth ou configuração de parceiro.',
+      },
+      {
+        number: '03',
+        title: 'Otimização de Velocidade',
+        description: 'Scripts de publicidade são um dos principais vilões de page speed. Auditamos o impacto de cada tag no CLS, LCP e INP, e implementamos as correções — sem abrir mão da receita.',
+      },
+      {
+        number: '04',
+        title: 'Plano de Crescimento de CPM',
+        description: 'Com dados reais em mãos, entregamos um roadmap de ações priorizadas pelo impacto em receita: novos parceiros a testar, configurações a ajustar, formatos a explorar e integrações a aprimorar.',
+      },
+    ],
+    differentials: [
+      'Visão de fora — enxergamos problemas que quem está dentro do dia a dia deixa de ver',
+      'Experiência com publishers de todos os portes: do blog especializado ao grande portal',
+      'Análise real de viewability com ferramentas de mercado, não apenas estimativas',
+      'Foco em velocidade de carregamento de anúncios sem abrir mão de receita',
+      'Conhecimento profundo de SSPs, header bidding, Google Ad Manager e Amazon TAM/UAM',
+      'Entregamos um roadmap acionável — não um relatório que fica na gaveta',
+    ],
+    ctaLabel: 'Agendar Consultoria Estratégica',
+    meta: {
+      title: 'Consultoria AdTech — Viewability, CPM e Velocidade para Publishers | AD TEC',
+      description: 'Auditoria completa de scripts, parceiros e integrações de publicidade. Aumentamos viewability, melhoramos velocidade de carregamento e elevamos CPM e receita do seu site.',
+    },
+  },
+  {
+    slug: 'branding',
+    color: 'gold',
+    badge: 'Identidade Visual & Branding',
+    headline: 'Uma marca que fica na cabeça — para sempre.',
+    intro: [
+      'Sabemos que uma boa identidade visual pode marcar a memória do seu cliente para sempre. Por isso, não trabalhamos com templates. Usamos uma metodologia em que sua marca conversa diretamente com seus produtos, seus valores e as pessoas que você quer alcançar.',
+      'Você senta com a gente, conta a sua história e nos mostra seus produtos. A partir daí, desenvolvemos soluções de branding completas — aplicáveis em tudo: website, embalagens, comunicação interna, redes sociais e muito mais.',
+    ],
+    steps: [
+      {
+        number: '01',
+        title: 'Imersão',
+        description: 'Ouvimos antes de criar. Entendemos sua história, seu mercado, seus concorrentes e, principalmente, as pessoas que você quer que se apaixonem pela sua marca. Quanto mais você nos conta, mais forte fica a identidade.',
+      },
+      {
+        number: '02',
+        title: 'Estratégia de Marca',
+        description: 'Definimos posicionamento, proposta de valor, tom de voz e atributos visuais que vão orientar cada decisão criativa — do ícone do favicon ao layout da embalagem.',
+      },
+      {
+        number: '03',
+        title: 'Criação Visual',
+        description: 'Desenvolvemos logotipo, paleta de cores, tipografia, padrões gráficos e todos os elementos visuais que formam a identidade. Apresentamos com contexto e justificativa estratégica, não apenas estética.',
+      },
+      {
+        number: '04',
+        title: 'Brandbook & Aplicações',
+        description: 'Entregamos um brandbook completo com diretrizes de uso — e aplicamos a identidade nos pontos de contato definidos juntos: website, redes sociais, embalagens, sinalização ou comunicação interna.',
+      },
+    ],
+    differentials: [
+      'Metodologia própria: a marca é construída a partir da sua história e dos seus produtos',
+      'Identidade pensada para todos os pontos de contato, não apenas para o logo',
+      'Brandbook completo com diretrizes claras para a equipe e fornecedores',
+      'Visão integrada entre branding e marketing digital — a marca funciona no mundo real e no digital',
+      'Experiência com empresas B2B, B2C, startups e rebranding de marcas consolidadas',
+      'Do naming ao brandbook — atendemos desde a criação do zero até a renovação de marcas existentes',
+    ],
+    ctaLabel: 'Agendar Consultoria de Marca',
+    meta: {
+      title: 'Identidade Visual & Branding — Do Logo ao Brandbook | AD TEC',
+      description: 'Criamos identidades visuais que ficam na memória. Metodologia própria, brandbook completo e aplicação em todos os pontos de contato — do website às embalagens.',
+    },
+  },
 ];
 
 export function getAllServiceSlugs(): string[] {
