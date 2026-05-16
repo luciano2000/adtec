@@ -1,7 +1,7 @@
 ---
 title: "O que é mídia programática e como funciona?"
 description: "Entenda como a mídia programática revolucionou a compra e venda de publicidade digital, automatizando processos e maximizando resultados."
-date: 2025-02-08
+date: "2025-02-08"
 tags: ["mídia programática", "ad tech", "publicidade"]
 image: "/blog/o-que-e-midia-programatica.webp"
 lang: "pt"

@@ -1,7 +1,7 @@
 ---
 title: O que é AdExchange
 description: O que é AdExchange
-date: 2026-02-10
+date: "2026-02-10"
 tags: ["adexchange", "publicidade"]
 image: "/blog/o-que-e-adexchange.webp"
 lang: "pt"

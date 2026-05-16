@@ -1,7 +1,7 @@
 ---
 title: Quais as Melhores Praticas para Monetizar um Site
 description: Quais as Melhores Praticas para Monetizar um Site
-date: 2026-02-10
+date: "2026-02-10"
 tags: ["monetizacao", "publicidade"]
 image: "/blog/quais-as-melhores-praticas-para-monetizar-um-site.webp"
 lang: "pt"
