@@ -64,7 +64,7 @@ export function Services() {
             return (
               <motion.a
                 key={service.id}
-                href="#contato"
+                href={service.hasPage ? `/servicos/${service.id}` : '#contato'}
                 variants={cardVariants}
                 whileHover={{ y: -6, borderColor: colors.border }}
                 transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
