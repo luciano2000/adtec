@@ -80,7 +80,7 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
 
         {post.image && (
-          <div className="relative w-full rounded-2xl overflow-hidden mb-10" style={{ height: 400 }}>
+          <div className="img-bleed relative rounded-2xl overflow-hidden mb-10" style={{ height: 400 }}>
             <Image src={post.image} alt={post.title} fill className="object-cover" />
           </div>
         )}

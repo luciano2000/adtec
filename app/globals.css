@@ -244,6 +244,18 @@ body {
   animation: marquee-right 40s linear infinite;
 }
 
+/* ─── Blog: imagem destacada com sangria ─── */
+.img-bleed {
+  width: 100%;
+  margin-left: 0;
+}
+@media (min-width: 640px) {
+  .img-bleed {
+    width: 130%;
+    margin-left: -15%;
+  }
+}
+
 /* ─── Blog prose ─── */
 .prose-adtec {
   color: var(--c-text-1);
