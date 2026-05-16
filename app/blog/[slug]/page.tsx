@@ -42,12 +42,12 @@ export default async function BlogPostPage({ params }: Props) {
   const contentHtml = await renderMarkdown(post.content);
 
   return (
-    <div style={{ background: '#060a14', minHeight: '100vh' }}>
+    <div style={{ background: 'var(--c-bg)', minHeight: '100vh' }}>
       <article className="max-w-3xl mx-auto px-6 pt-36 pb-24">
         <Link
           href="/blog"
           className="inline-flex items-center gap-2 text-sm mb-10 transition-colors"
-          style={{ color: '#6b7590' }}
+          style={{ color: 'var(--c-text-2)' }}
         >
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path d="M13 8H3M7 4l-4 4 4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -65,15 +65,15 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         )}
 
-        <h1 className="text-4xl md:text-5xl font-black leading-tight mb-4" style={{ color: '#e8eaf0' }}>
+        <h1 className="text-4xl md:text-5xl font-black leading-tight mb-4" style={{ color: 'var(--c-text-1)' }}>
           {post.title}
         </h1>
 
         {post.description && (
-          <p className="text-lg leading-relaxed mb-6" style={{ color: '#6b7590' }}>{post.description}</p>
+          <p className="text-lg leading-relaxed mb-6" style={{ color: 'var(--c-text-2)' }}>{post.description}</p>
         )}
 
-        <div className="flex items-center gap-4 pb-8 mb-8 border-b text-sm" style={{ borderColor: 'rgba(255,255,255,0.07)', color: '#3d4460' }}>
+        <div className="flex items-center gap-4 pb-8 mb-8 border-b text-sm" style={{ borderColor: 'var(--c-border)', color: 'var(--c-text-3)' }}>
           <span>AD TEC</span>
           <span>·</span>
           <time dateTime={post.date}>{formatDate(post.date, 'pt')}</time>
@@ -87,7 +87,7 @@ export default async function BlogPostPage({ params }: Props) {
 
         <div className="prose-adtec" dangerouslySetInnerHTML={{ __html: contentHtml }} />
 
-        <div className="mt-16 pt-8 border-t" style={{ borderColor: 'rgba(255,255,255,0.07)' }}>
+        <div className="mt-16 pt-8 border-t" style={{ borderColor: 'var(--c-border)' }}>
           <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-medium" style={{ color: '#4285f4' }}>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M13 8H3M7 4l-4 4 4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />

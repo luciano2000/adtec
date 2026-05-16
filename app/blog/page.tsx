@@ -16,7 +16,7 @@ export default function BlogPage() {
   const posts = getAllPosts();
 
   return (
-    <div style={{ background: '#060a14', minHeight: '100vh' }}>
+    <div style={{ background: 'var(--c-bg)', minHeight: '100vh' }}>
       <div className="max-w-7xl mx-auto px-6 pt-36 pb-24">
         <div className="mb-14">
           <span
@@ -25,16 +25,16 @@ export default function BlogPage() {
           >
             Blog
           </span>
-          <h1 className="text-5xl font-black mb-4" style={{ color: '#e8eaf0' }}>
+          <h1 className="text-5xl font-black mb-4" style={{ color: 'var(--c-text-1)' }}>
             Insights &amp; Artigos
           </h1>
-          <p style={{ color: '#6b7590' }}>
+          <p style={{ color: 'var(--c-text-2)' }}>
             Perspectivas do nosso time sobre o ecossistema de publicidade digital.
           </p>
         </div>
 
         {posts.length === 0 ? (
-          <p style={{ color: '#6b7590' }}>Nenhum artigo publicado ainda.</p>
+          <p style={{ color: 'var(--c-text-2)' }}>Nenhum artigo publicado ainda.</p>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {posts.map((post) => (
