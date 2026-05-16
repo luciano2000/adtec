@@ -34,13 +34,8 @@ export async function submitContact(formData: FormData) {
       }
     );
 
-    if (!res.ok) {
-      const body = await res.text();
-      console.error('[HubSpot]', res.status, body);
-    }
     return { success: res.ok };
-  } catch (err) {
-    console.error('[HubSpot] fetch error', err);
+  } catch {
     return { success: false };
   }
 }
