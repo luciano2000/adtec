@@ -9,12 +9,12 @@ export const t = {
   },
 
   hero: {
-    badge:     { pt: 'Agência Digital de Performance', en: 'Digital Performance Agency' },
+    badge:     { pt: 'Agência AdTech de Performance', en: 'AdTech Performance Agency' },
     headline1: { pt: 'Publicidade com',       en: 'Advertising with'     },
     headline2: { pt: 'Inteligência',          en: 'Intelligence'         },
     sub:       {
-      pt: 'Conectamos marcas ao futuro da publicidade digital — com tecnologia, dados e resultados que importam.',
-      en: 'We connect brands to the future of digital advertising — with technology, data, and results that matter.',
+      pt: 'Conectamos marcas ao futuro da publicidade digital — com tecnologia AdTech, dados e resultados que importam.',
+      en: 'We connect brands to the future of digital advertising — with AdTech, data, and results that matter.',
     },
     cta1: { pt: 'Ver Serviços',  en: 'Our Services' },
     cta2: { pt: 'Fale Conosco', en: 'Get in Touch'  },
@@ -22,8 +22,8 @@ export const t = {
 
   services: {
     badge:    { pt: 'O que fazemos',    en: 'What we do'           },
-    heading:  { pt: 'Soluções completas para o ecossistema de publicidade digital',
-                en: 'Complete solutions for the digital advertising ecosystem' },
+    heading:  { pt: 'Soluções completas para o ecossistema de AdTech e publicidade digital',
+                en: 'Complete solutions for the AdTech and digital advertising ecosystem' },
     list: [
       {
         id: 'paid-media',
@@ -91,8 +91,8 @@ export const t = {
   about: {
     badge:   { pt: 'Sobre nós',    en: 'About us'    },
     heading: {
-      pt: 'Mais de 20 anos conectando tecnologia e publicidade',
-      en: 'Over 20 years connecting technology and advertising',
+      pt: 'Mais de 20 anos no ecossistema de AdTech e publicidade digital',
+      en: 'Over 20 years in the AdTech and digital advertising ecosystem',
     },
     body: {
       pt: 'Nossa equipe reúne especialistas com trajetória consolidada no ecossistema digital. Desde 2000 acompanhamos cada evolução da publicidade online — do banner estático à inteligência artificial —, acumulando expertise técnica que poucas agências no Brasil têm.',

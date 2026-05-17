@@ -11,13 +11,14 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://ad.tec.br'),
   title: {
     template: '%s | AD TEC',
-    default: 'AD TEC — Publicidade com Inteligência',
+    default: 'AD TEC — Agência AdTech | Publicidade com Inteligência',
   },
   description:
-    'Agência digital especializada em AdTech, mídia programática, tráfego pago, SEO e desenvolvimento web. Mais de 20 anos de experiência em publicidade digital.',
+    'Agência AdTech brasileira especializada em mídia programática, tráfego pago, SEO e ad operations. Mais de 20 anos de experiência no ecossistema de ad tech.',
   keywords: [
-    'adtech', 'mídia programática', 'tráfego pago', 'google ads', 'meta ads',
-    'SEO', 'agência digital', 'adops', 'header bidding', 'google ad manager',
+    'adtech', 'ad tech', 'agência adtech', 'agência ad tech', 'ad tech brasil',
+    'mídia programática', 'tráfego pago', 'google ads', 'meta ads',
+    'SEO', 'adops', 'header bidding', 'google ad manager',
     'desenvolvimento web', 'consultoria adtech', 'performance digital',
   ],
   authors: [{ name: 'AD TEC' }],
@@ -34,15 +35,15 @@ export const metadata: Metadata = {
     alternateLocale: 'en_US',
     url: 'https://ad.tec.br',
     siteName: 'AD TEC',
-    title: 'AD TEC — Publicidade com Inteligência',
+    title: 'AD TEC — Agência AdTech | Publicidade com Inteligência',
     description:
-      'Agência digital especializada em AdTech, mídia programática, tráfego pago e SEO. Mais de 20 anos de experiência.',
+      'Agência AdTech brasileira especializada em mídia programática, tráfego pago e SEO. Mais de 20 anos de experiência no ecossistema de ad tech.',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'AD TEC' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AD TEC — Publicidade com Inteligência',
-    description: 'Agência digital especializada em AdTech, mídia programática, tráfego pago e SEO.',
+    title: 'AD TEC — Agência AdTech | Publicidade com Inteligência',
+    description: 'Agência AdTech brasileira especializada em mídia programática, tráfego pago e SEO. Mais de 20 anos de experiência.',
     images: ['/og-image.png'],
   },
   alternates: {
@@ -65,6 +66,28 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         {/* Anti-FOUC: aplica o tema antes do primeiro render */}
         <script dangerouslySetInnerHTML={{ __html: `try{var t=localStorage.getItem('adtec-theme')||'dark';document.documentElement.setAttribute('data-theme',t)}catch(e){}` }} />
+        {/* JSON-LD: Organization schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'AD TEC',
+            alternateName: ['AD TECH', 'AdTech', 'ADTEC'],
+            description: 'Agência AdTech brasileira especializada em mídia programática, tráfego pago, SEO e ad operations. Mais de 20 anos de experiência no ecossistema de ad tech.',
+            url: 'https://ad.tec.br',
+            logo: 'https://ad.tec.br/novo-logo-35A853.svg',
+            email: 'atendimento@ad.tec.br',
+            telephone: '+5511978385112',
+            foundingDate: '2000',
+            address: { '@type': 'PostalAddress', addressCountry: 'BR' },
+            knowsAbout: [
+              'AdTech', 'Ad Tech', 'Mídia Programática', 'Tráfego Pago',
+              'Google Ads', 'Meta Ads', 'Header Bidding', 'Google Ad Manager',
+              'SEO', 'Ad Operations', 'Programmatic Advertising', 'Identidade Visual',
+            ],
+          })}}
+        />
         <Script
           id="gtm"
           strategy="afterInteractive"
