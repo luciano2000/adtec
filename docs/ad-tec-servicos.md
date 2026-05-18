@@ -12,7 +12,7 @@
 **WhatsApp:** (11) 97838-5112  
 **Slogan:** Publicidade com Inteligência
 
-A AD TEC é uma agência digital de performance com mais de 20 anos de atuação no ecossistema de publicidade digital. Fundada em 2000, a empresa acompanhou cada evolução da publicidade online — do banner estático à inteligência artificial — acumulando expertise técnica que poucas agências no Brasil possuem.
+A AD TEC é uma agência digital de performance com profissionais com mais de 20 anos de atuação no ecossistema de publicidade digital. Fundada em 2023, a empresa acompanhou cada evolução da publicidade online — do banner estático à inteligência artificial — acumulando expertise técnica que poucas agências no Brasil possuem.
 
 **Diferenciais institucionais:**
 - Mais de 20 anos de experiência comprovada no mercado digital

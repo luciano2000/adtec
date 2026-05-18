@@ -39,4 +39,4 @@ Na **AD TEC**, oferecemos serviços completos de mídia programática:
 - **Gestão de deals (PDs e PGs)**
 - **Otimização contínua de receita**
 
-Quer saber mais? [Entre em contato](/contato) com nossa equipe.
+Quer saber mais? [Entre em contato](/#contato) com nossa equipe.
