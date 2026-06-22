@@ -303,6 +303,57 @@ const services: ServiceContent[] = [
       description: 'Criamos identidades visuais que ficam na memória. Metodologia própria, brandbook completo e aplicação em todos os pontos de contato — do website às embalagens.',
     },
   },
+  {
+    slug: 'whatsapp-automation',
+    color: 'green',
+    badge: 'Automação WhatsApp',
+    headline: 'Atendimento Inteligente 24h.',
+    intro: [
+      'Seu WhatsApp respondendo clientes 24 horas por dia, qualificando leads automaticamente e agendando consultas — sem precisar de mais funcionários.',
+      'Implementamos e configuramos um assistente virtual com GPT-4o diretamente no WhatsApp da sua empresa. Da conexão ao treinamento da IA, cuidamos de tudo para você começar a atender melhor desde o primeiro dia.',
+    ],
+    steps: [
+      {
+        number: '01',
+        title: 'Diagnóstico do negócio',
+        description: 'Entendemos seu fluxo de atendimento atual, mapeamos as perguntas mais frequentes dos seus clientes e definimos o perfil ideal do seu assistente virtual.',
+      },
+      {
+        number: '02',
+        title: 'Configuração e treinamento da IA',
+        description: 'Conectamos o WhatsApp, configuramos o tom de voz, os horários de atendimento e treinamos a IA com o conhecimento específico do seu negócio.',
+      },
+      {
+        number: '03',
+        title: 'Ativação e monitoramento',
+        description: 'Colocamos o assistente em produção e monitoramos as primeiras conversas para garantir qualidade e ajustar o comportamento da IA conforme necessário.',
+      },
+      {
+        number: '04',
+        title: 'Otimização contínua',
+        description: 'Analisamos periodicamente as conversas, melhoramos as respostas e ampliamos as capacidades do assistente conforme seu negócio cresce.',
+      },
+    ],
+    platforms: [
+      { name: 'WhatsApp Business', description: 'Conexão direta via API oficial Meta ou QR code, conforme sua necessidade.' },
+      { name: 'GPT-4o', description: 'Modelo de IA da OpenAI para respostas naturais, inteligentes e contextuais.' },
+      { name: 'HubSpot / Pipedrive / Zoho', description: 'Integração com os principais CRMs para sincronizar leads automaticamente.' },
+      { name: 'Modo Takeover', description: 'Assuma qualquer conversa manualmente com um clique quando precisar do toque humano.' },
+    ],
+    differentials: [
+      'Experiência real com a plataforma — desenvolvemos e operamos um SaaS de automação WhatsApp que trouxemos para dentro da AD TEC como consultoria.',
+      'Configuração completa e treinamento da IA inclusos — não entregamos apenas a ferramenta, implementamos a solução do início ao fim.',
+      'Integração com CRM e ferramentas de marketing para que nenhum lead se perca no caminho.',
+      'Monitoramento e otimização contínua das conversas para melhorar continuamente a taxa de conversão.',
+      'Conformidade com LGPD: toda a arquitetura de dados segue as melhores práticas de privacidade.',
+      'Atendimento que funciona 24h por dia, 7 dias por semana — sem custo adicional de equipe.',
+    ],
+    ctaLabel: 'Quero automatizar meu atendimento',
+    meta: {
+      title: 'Automação de Atendimento via WhatsApp com IA | AD TEC',
+      description: 'Implementamos assistentes virtuais com IA no seu WhatsApp: atendimento 24h, qualificação automática de leads e agendamento. Consultoria completa da AD TEC.',
+    },
+  },
 ];
 
 export function getAllServiceSlugs(): string[] {

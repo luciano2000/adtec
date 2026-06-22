@@ -61,6 +61,84 @@ export function Services() {
           {t.services.list.map((service, i) => {
             const colors = colorMap[service.color];
             const num = String(i + 1).padStart(2, '0');
+            const isLast = i === t.services.list.length - 1;
+
+            if (isLast) {
+              const featuresPt = ['IA 24h', 'Qualificação de leads', 'Integração CRM', 'Agendamento automático'];
+              const featuresEn = ['AI 24h', 'Lead qualification', 'CRM integration', 'Auto scheduling'];
+              const features = lang === 'pt' ? featuresPt : featuresEn;
+
+              return (
+                <motion.a
+                  key={service.id}
+                  href={`/servicos/${service.id}`}
+                  variants={cardVariants}
+                  whileHover={{ y: -4, borderColor: colors.border }}
+                  transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                  className="group relative flex flex-col md:flex-row md:items-center gap-8 p-8 rounded-2xl border overflow-hidden lg:col-span-3"
+                  style={{
+                    background: 'var(--c-surface)',
+                    borderColor: colors.border,
+                    textDecoration: 'none',
+                  }}
+                >
+                  {/* Background number */}
+                  <span
+                    className="absolute top-4 right-8 font-black select-none pointer-events-none leading-none"
+                    style={{ fontSize: '9rem', color: colors.accent, opacity: 0.04, lineHeight: 1 }}
+                  >
+                    {num}
+                  </span>
+
+                  {/* Left: content */}
+                  <div className="flex-1 relative z-10">
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="text-xs font-bold tracking-widest uppercase" style={{ color: colors.accent }}>{num}</span>
+                      <span
+                        className="text-xs font-semibold px-2 py-0.5 rounded-full"
+                        style={{ color: colors.accent, background: colors.bg, border: `1px solid ${colors.border}` }}
+                      >
+                        {lang === 'pt' ? 'Novo' : 'New'}
+                      </span>
+                    </div>
+                    <h3
+                      className="font-black leading-tight mb-3"
+                      style={{ color: 'var(--c-text-1)', fontSize: 'clamp(1.5rem, 3vw, 2rem)' }}
+                    >
+                      {lang === 'pt' ? service.titlePt : service.titleEn}
+                    </h3>
+                    <p className="text-sm leading-relaxed max-w-xl" style={{ color: 'var(--c-text-2)' }}>
+                      {lang === 'pt' ? service.descPt : service.descEn}
+                    </p>
+                  </div>
+
+                  {/* Right: feature pills + CTA */}
+                  <div className="flex flex-col gap-4 relative z-10 shrink-0 md:items-end">
+                    <div className="flex flex-wrap gap-2 md:justify-end">
+                      {features.map((pill) => (
+                        <span
+                          key={pill}
+                          className="text-xs px-3 py-1 rounded-full"
+                          style={{ color: colors.accent, background: colors.bg, border: `1px solid ${colors.border}` }}
+                        >
+                          {pill}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="flex items-center gap-2 text-xs font-semibold" style={{ color: colors.accent }}>
+                      {lang === 'pt' ? 'Saiba mais' : 'Learn more'}
+                      <svg
+                        width="14" height="14" viewBox="0 0 16 16" fill="none"
+                        className="transition-transform duration-200 group-hover:translate-x-1"
+                      >
+                        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
+                </motion.a>
+              );
+            }
+
             return (
               <motion.a
                 key={service.id}
@@ -79,38 +157,24 @@ export function Services() {
                 {/* Number — background decoration */}
                 <span
                   className="absolute top-4 right-6 font-black select-none pointer-events-none leading-none"
-                  style={{
-                    fontSize: '6rem',
-                    color: colors.accent,
-                    opacity: 0.06,
-                    lineHeight: 1,
-                  }}
+                  style={{ fontSize: '6rem', color: colors.accent, opacity: 0.06, lineHeight: 1 }}
                 >
                   {num}
                 </span>
 
                 {/* Top: number badge + accent dot */}
                 <div className="flex items-center justify-between mb-6">
-                  <span
-                    className="text-xs font-bold tracking-widest uppercase"
-                    style={{ color: colors.accent }}
-                  >
+                  <span className="text-xs font-bold tracking-widest uppercase" style={{ color: colors.accent }}>
                     {num}
                   </span>
-                  <span
-                    className="w-2 h-2 rounded-full"
-                    style={{ background: colors.accent, opacity: 0.6 }}
-                  />
+                  <span className="w-2 h-2 rounded-full" style={{ background: colors.accent, opacity: 0.6 }} />
                 </div>
 
                 {/* Title — large and dominant */}
                 <div className="flex-1">
                   <h3
                     className="font-black leading-tight mb-4"
-                    style={{
-                      color: 'var(--c-text-1)',
-                      fontSize: 'clamp(1.35rem, 2.5vw, 1.65rem)',
-                    }}
+                    style={{ color: 'var(--c-text-1)', fontSize: 'clamp(1.35rem, 2.5vw, 1.65rem)' }}
                   >
                     {lang === 'pt' ? service.titlePt : service.titleEn}
                   </h3>
@@ -122,10 +186,7 @@ export function Services() {
                 {/* Bottom CTA */}
                 <div
                   className="flex items-center gap-2 mt-8 pt-5 border-t text-xs font-semibold transition-all"
-                  style={{
-                    borderColor: 'var(--c-border-s)',
-                    color: colors.accent,
-                  }}
+                  style={{ borderColor: 'var(--c-border-s)', color: colors.accent }}
                 >
                   {lang === 'pt' ? 'Saiba mais' : 'Learn more'}
                   <svg

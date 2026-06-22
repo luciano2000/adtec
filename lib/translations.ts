@@ -85,6 +85,16 @@ export const t = {
         descPt:  'Criamos logotipos e identidades visuais que comunicam a essência da sua marca — do naming ao brandbook completo, com consistência em todos os pontos de contato.',
         descEn:  'We create logos and visual identities that communicate the essence of your brand — from naming to a complete brandbook, with consistency across all touchpoints.',
       },
+      {
+        id: 'whatsapp-automation',
+        icon: 'whatsapp',
+        color: 'green' as const,
+        hasPage: true,
+        titlePt: 'Automação de Atendimento via WhatsApp',
+        titleEn: 'WhatsApp Automation',
+        descPt:  'Implementamos assistentes virtuais com IA no WhatsApp da sua empresa: atendimento 24h, qualificação automática de leads, agendamento e integração com CRM.',
+        descEn:  'We implement AI-powered virtual assistants on your WhatsApp: 24h support, automatic lead qualification, scheduling and CRM integration.',
+      },
     ],
   },
 
